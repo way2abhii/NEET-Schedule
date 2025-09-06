@@ -1,11 +1,9 @@
-<SKIPPED_HTML_EDIT_MODE></SKIPPED_HTML_EDIT_MODE>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEET 2026 & 12th Boards Study Schedule</title>
+    <title>NEET UG 2025 Syllabus & Study Tracker</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
@@ -13,15 +11,16 @@
         .checked { text-decoration: line-through; opacity: 0.6; }
         .quote { animation: fade 5s infinite; }
         @keyframes fade { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
-        .topic { margin-left: 20px; font-size: 0.9em; }
+        .topic-item { margin-left: 20px; font-size: 0.95em; padding: 4px 0; }
+        .sub-section-title { font-weight: 600; margin-top: 10px; margin-bottom: 5px; display: block; }
     </style>
 </head>
 <body class="min-h-screen p-4">
     <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-2xl p-6">
         <!-- Header with Motivational Quote -->
         <header class="text-center mb-8">
-            <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Your NEET 2026 & 12th Boards Detailed Study Journey</h1>
-            <p class="text-lg text-purple-600 italic quote">"Success is walking from failure to failure with no loss of enthusiasm. You've got this!" - Winston Churchill</p>
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">NEET UG 2025 Syllabus & Study Tracker</h1>
+            <p class="text-lg text-purple-600 italic quote">"The only way to do great work is to love what you do." - Steve Jobs</p>
         </header>
 
         <!-- Progress Tracker -->
@@ -33,68 +32,194 @@
             <p id="progress-text" class="text-sm text-gray-600">0% completed</p>
         </section>
 
-        <!-- Schedule Sections -->
+        <!-- Syllabus Sections -->
         <div class="space-y-6">
             <!-- Physics -->
             <details class="schedule-tab bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
-                <summary class="text-xl font-medium text-blue-800 cursor-pointer">Physics Chapters (Key Topics Breakdown)</summary>
+                <summary class="text-xl font-medium text-blue-800 cursor-pointer">Physics Syllabus</summary>
                 <div class="mt-4 space-y-2">
                     <details>
-                        <summary class="font-semibold">Sep: Electrostatics (1-3 weeks)</summary>
-                        <div class="topic">
-                            <div class="chapter"><input type="checkbox" id="p1a" onclick="updateProgress()"> Coulomb's Law</div>
-                            <div class="chapter"><input type="checkbox" id="p1b" onclick="updateProgress()"> Electric Field and Potential</div>
-                            <div class="chapter"><input type="checkbox" id="p1c" onclick="updateProgress()"> Gauss's Theorem and Capacitors</div>
+                        <summary class="font-semibold">UNIT 1: PHYSICS AND MEASUREMENT</summary>
+                        <div class="topic-item"><input type="checkbox" id="phy_unit1_1" onclick="updateProgress()"> Units of measurements, System of Units, SI Units, fundamental and derived units, least count, significant figures, Errors in measurements</div>
+                        <div class="topic-item"><input type="checkbox" id="phy_unit1_2" onclick="updateProgress()"> Dimensions of Physics quantities, dimensional analysis, and its applications.</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT 1:</h4>
+                            <textarea id="notes_phy_unit1" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
                         </div>
                     </details>
                     <details>
-                        <summary class="font-semibold">Sep: Current Electricity (4 weeks)</summary>
-                        <div class="topic">
-                            <div class="chapter"><input type="checkbox" id="p2a" onclick="updateProgress()"> Ohm's Law and Kirchhoff's Rules</div>
-                            <div class="chapter"><input type="checkbox" id="p2b" onclick="updateProgress()"> Wheatstone Bridge and Potentiometer</div>
-                            <div class="chapter"><input type="checkbox" id="p2c" onclick="updateProgress()"> Cells and Batteries</div>
+                        <summary class="font-semibold">UNIT 2: KINEMATICS</summary>
+                        <div class="topic-item"><input type="checkbox" id="phy_unit2_1" onclick="updateProgress()"> The frame of reference, motion in a straight line, Position-time graph, speed and velocity; Uniform and non-uniform motion, average speed and instantaneous velocity, uniformly accelerated motion, velocity-time, position-time graph, relations for uniformly accelerated motion</div>
+                        <div class="topic-item"><input type="checkbox" id="phy_unit2_2" onclick="updateProgress()"> Scalars and Vectors, Vector. Addition and subtraction, scalar and vector products, Unit Vector, Resolution of a Vector. Relative Velocity, Motion in a plane, Projectile Motion, Uniform Circular Motion.</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT 2:</h4>
+                            <textarea id="notes_phy_unit2" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
                         </div>
                     </details>
                     <details>
-                        <summary class="font-semibold">Oct: Magnetic Effects of Current (1-2 weeks)</summary>
-                        <div class="topic">
-                            <div class="chapter"><input type="checkbox" id="p3a" onclick="updateProgress()"> Magnetic Field Due to Current</div>
-                            <div class="chapter"><input type="checkbox" id="p3b" onclick="updateProgress()"> Force on Moving Charges</div>
+                        <summary class="font-semibold">UNIT 3: LAWS OF MOTION</summary>
+                        <div class="topic-item"><input type="checkbox" id="phy_unit3_1" onclick="updateProgress()"> Force and inertia, Newton’s First law of motion; Momentum, Newton’s Second Law of motion, Impulses; Newton’s Third Law of motion. Law of conservation of linear momentum and its applications. Equilibrium of concurrent forces.</div>
+                        <div class="topic-item"><input type="checkbox" id="phy_unit3_2" onclick="updateProgress()"> Static and Kinetic friction, laws of friction, rolling friction.</div>
+                        <div class="topic-item"><input type="checkbox" id="phy_unit3_3" onclick="updateProgress()"> Dynamics of uniform circular motion: centripetal force and its applications: vehicle on a level circular road, vehicle on a banked road.</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT 3:</h4>
+                            <textarea id="notes_phy_unit3" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
                         </div>
                     </details>
                     <details>
-                        <summary class="font-semibold">Oct: Magnetism (3-4 weeks)</summary>
-                        <div class="topic">
-                            <div class="chapter"><input type="checkbox" id="p4a" onclick="updateProgress()"> Earth's Magnetic Field</div>
-                            <div class="chapter"><input type="checkbox" id="p4b" onclick="updateProgress()"> Magnetic Materials and Hysteresis</div>
+                        <summary class="font-semibold">UNIT 4: WORK, ENERGY, AND POWER</summary>
+                        <div class="topic-item"><input type="checkbox" id="phy_unit4_1" onclick="updateProgress()"> Work done by a constant force and a variable force; kinetic and potential energies, work-energy theorem, power.</div>
+                        <div class="topic-item"><input type="checkbox" id="phy_unit4_2" onclick="updateProgress()"> The potential energy of spring conservation of mechanical energy, conservative and non-conservative forces; motion in a vertical circle: Elastic and inelastic collisions in one and two dimensions.</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT 4:</h4>
+                            <textarea id="notes_phy_unit4" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
                         </div>
                     </details>
                     <details>
-                        <summary class="font-semibold">Nov: Electromagnetic Induction (1-3 weeks)</summary>
-                        <div class="topic">
-                            <div class="chapter"><input type="checkbox" id="p5a" onclick="updateProgress()"> Faraday's Laws and Lenz's Law</div>
-                            <div class="chapter"><input type="checkbox" id="p5b" onclick="updateProgress()"> Eddy Currents and Motional EMF</div>
+                        <summary class="font-semibold">UNIT 5: ROTATIONAL MOTION</summary>
+                        <div class="topic-item"><input type="checkbox" id="phy_unit5_1" onclick="updateProgress()"> Centre of the mass of a two-particle system, Centre of the mass of a rigid body; Basic concepts of rotational motion; moment of a force; torque, angular momentum, conservation of angular momentum and its applications;</div>
+                        <div class="topic-item"><input type="checkbox" id="phy_unit5_2" onclick="updateProgress()"> The moment of inertia, the radius of gyration, values of moments of inertia for simple geometrical objects, parallel and perpendicular axes theorems, and their applications. Equilibrium of rigid bodies, rigid body rotation and equations of rotational motion, comparison of linear and rotational motions.</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT 5:</h4>
+                            <textarea id="notes_phy_unit5" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
                         </div>
                     </details>
                     <details>
-                        <summary class="font-semibold">Nov: Alternating Current (4 weeks)</summary>
-                        <div class="topic">
-                            <div class="chapter"><input type="checkbox" id="p6a" onclick="updateProgress()"> AC Circuits and Phasors</div>
-                            <div class="chapter"><input type="checkbox" id="p6b" onclick="updateProgress()"> Resonance and Power</div>
+                        <summary class="font-semibold">UNIT 6: GRAVITATION</summary>
+                        <div class="topic-item"><input type="checkbox" id="phy_unit6_1" onclick="updateProgress()"> The universal law of gravitation. Acceleration due to gravity and its variation with altitude and depth. Kepler’s law of planetary motion. Gravitational potential energy; gravitational potential.</div>
+                        <div class="topic-item"><input type="checkbox" id="phy_unit6_2" onclick="updateProgress()"> Escape velocity, Motion of a satellite, orbital velocity, time period and energy of satellite.</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT 6:</h4>
+                            <textarea id="notes_phy_unit6" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
                         </div>
                     </details>
                     <details>
-                        <summary class="font-semibold">Dec: Optics (1-2 weeks)</summary>
-                        <div class="topic">
-                            <div class="chapter"><input type="checkbox" id="p7a" onclick="updateProgress()"> Reflection and Refraction</div>
-                            <div class="chapter"><input type="checkbox" id="p7b" onclick="updateProgress()"> Lens Formula and Wave Optics</div>
+                        <summary class="font-semibold">UNIT 7: PROPERTIES OF SOLIDS AND LIQUIDS</summary>
+                        <div class="topic-item"><input type="checkbox" id="phy_unit7_1" onclick="updateProgress()"> Elastic behaviour, Stress-strain relationship, Hooke's Law. Young's modulus, bulk modulus, modulus of rigidity. Pressure due to a fluid column; Pascal's law and its applications. Effect of gravity on fluid pressure.</div>
+                        <div class="topic-item"><input type="checkbox" id="phy_unit7_2" onclick="updateProgress()"> Viscosity. Stokes' law. terminal velocity, streamline, and turbulent flow.critical velocity. Bernoulli's principle and its applications.</div>
+                        <div class="topic-item"><input type="checkbox" id="phy_unit7_3" onclick="updateProgress()"> Surface energy and surface tension, angle of contact, excess of pressure across a curved surface, application of surface tension - drops, bubbles, and capillary rise. Heat, temperature, thermal expansion; specific heat capacity, calorimetry; change of state, latent heat. Heat transfer- conduction, convection, and radiation.</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT 7:</h4>
+                            <textarea id="notes_phy_unit7" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
                         </div>
                     </details>
                     <details>
-                        <summary class="font-semibold">Dec: Dual Nature & Atoms (3-4 weeks)</summary>
-                        <div class="topic">
-                            <div class="chapter"><input type="checkbox" id="p8a" onclick="updateProgress()"> Photoelectric Effect</div>
-                            <div class="chapter"><input type="checkbox" id="p8b" onclick="updateProgress()"> Bohr's Model and Atomic Spectra</div>
+                        <summary class="font-semibold">UNIT 8: THERMODYNAMICS</summary>
+                        <div class="topic-item"><input type="checkbox" id="phy_unit8_1" onclick="updateProgress()"> Thermal equilibrium, zeroth law of thermodynamics, the concept of temperature. Heat, work, and internal energy. The first law of thermodynamics, isothermal and adiabatic processes.</div>
+                        <div class="topic-item"><input type="checkbox" id="phy_unit8_2" onclick="updateProgress()"> The second law of thermodynamics: reversible and irreversible processes.</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT 8:</h4>
+                            <textarea id="notes_phy_unit8" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
+                        </div>
+                    </details>
+                    <details>
+                        <summary class="font-semibold">UNIT 9: KINETIC THEORY OF GASES</summary>
+                        <div class="topic-item"><input type="checkbox" id="phy_unit9_1" onclick="updateProgress()"> Equation of state of a perfect gas, work done on compressing a gas, Kinetic theory of gases - assumptions, the concept of pressure. Kinetic interpretation of temperature: RMS speed of gas molecules: Degrees of freedom. Law of equipartition of energy and applications to specific heat capacities of gases; Mean free path. Avogadro's number.</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT 9:</h4>
+                            <textarea id="notes_phy_unit9" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
+                        </div>
+                    </details>
+                    <details>
+                        <summary class="font-semibold">UNIT 10: OSCILLATIONS AND WAVES</summary>
+                        <div class="topic-item"><input type="checkbox" id="phy_unit10_1" onclick="updateProgress()"> Oscillations and periodic motion – time period, frequency, displacement as a function of time. Periodic functions. Simple harmonic motion (S.H.M.) and its equation; phase: oscillations of a spring -restoring force and force constant: energy in S.H.M. - Kinetic and potential energies; Simple pendulum - derivation of expression for its time period:</div>
+                        <div class="topic-item"><input type="checkbox" id="phy_unit10_2" onclick="updateProgress()"> Wave motion. Longitudinal and transverse waves, speed of travelling wave. Displacement relation for a progressive wave. Principle of superposition of waves, reflection of waves. Standing waves in strings and organ pipes, fundamental mode and harmonics. Beats.</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT 10:</h4>
+                            <textarea id="notes_phy_unit10" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
+                        </div>
+                    </details>
+                    <details>
+                        <summary class="font-semibold">UNIT 11: ELECTROSTATICS</summary>
+                        <div class="topic-item"><input type="checkbox" id="phy_unit11_1" onclick="updateProgress()"> Electric charges: Conservation of charge. Coulomb's law forces between two point charges, forces between multiple charges: superposition principle and continuous charge distribution.</div>
+                        <div class="topic-item"><input type="checkbox" id="phy_unit11_2" onclick="updateProgress()"> Electric field: Electric field due to a point charge, Electric field lines. Electric dipole, Electric field due to a dipole. Torque on a dipole in a uniform electric field.</div>
+                        <div class="topic-item"><input type="checkbox" id="phy_unit11_3" onclick="updateProgress()"> Electric flux. Gauss's law and its applications to find field due to infinitely long uniformly charged straight wire, uniformly charged infinite plane sheet, and uniformly charged thin spherical shell. Electric potential and its calculation for a point charge, electric dipole and system of charges; potential difference, Equipotential surfaces, Electrical potential energy of a system of two point charges and of electric dipole in an electrostatic field.</div>
+                        <div class="topic-item"><input type="checkbox" id="phy_unit11_4" onclick="updateProgress()"> Conductors and insulators. Dielectrics and electric polarization, capacitors and capacitances, the combination of capacitors in series and parallel, capacitance of a parallel plate capacitor with and without dielectric medium between the plates. Energy stored in a capacitor.</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT 11:</h4>
+                            <textarea id="notes_phy_unit11" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
+                        </div>
+                    </details>
+                    <details>
+                        <summary class="font-semibold">UNIT 12: CURRENT ELECTRICITY</summary>
+                        <div class="topic-item"><input type="checkbox" id="phy_unit12_1" onclick="updateProgress()"> Electric current. Drift velocity, mobility and their relation with electric current. Ohm's law. Electrical resistance. V-l characteristics of Ohmic and non-ohmic conductors. Electrical energy and power. Electrical resistivity and conductivity. Series and parallel combinations of resistors; Temperature dependence of resistance.</div>
+                        <div class="topic-item"><input type="checkbox" id="phy_unit12_2" onclick="updateProgress()"> Internal resistance, potential difference and emf of a cell, a combination of cells in series and parallel. Kirchhoff’s laws and their applications. Wheatstone bridge. Metre Bridge.</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT 12:</h4>
+                            <textarea id="notes_phy_unit12" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
+                        </div>
+                    </details>
+                    <details>
+                        <summary class="font-semibold">UNIT 13: MAGNETIC EFFECTS OF CURRENT AND MAGNETISM</summary>
+                        <div class="topic-item"><input type="checkbox" id="phy_unit13_1" onclick="updateProgress()"> Biot - Savart law and its application to current carrying circular loop. Ampere's law and its applications to infinitely long current carrying straight wire and solenoid. Force on a moving charge in uniform magnetic and electric fields.</div>
+                        <div class="topic-item"><input type="checkbox" id="phy_unit13_2" onclick="updateProgress()"> Force on a current-carrying conductor in a uniform magnetic field. The force between two parallel currents carrying conductors-definition of ampere. Torque experienced by a current loop in a uniform magnetic field: Moving coil galvanometer, its sensitivity, and conversion to ammeter and voltmeter.</div>
+                        <div class="topic-item"><input type="checkbox" id="phy_unit13_3" onclick="updateProgress()"> Current loop as a magnetic dipole and its magnetic dipole moment. Bar magnet as an equivalent solenoid, magnetic field lines; Magnetic field due to a magnetic dipole (bar magnet) along its axis and perpendicular to its axis. Torque on a magnetic dipole in a uniform magnetic field. Para-, dia- and ferromagnetic substances with examples, effect of temperature on magnetic properties.</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT 13:</h4>
+                            <textarea id="notes_phy_unit13" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
+                        </div>
+                    </details>
+                    <details>
+                        <summary class="font-semibold">UNIT 14: ELECTROMAGNETIC INDUCTION AND ALTERNATING CURRENTS</summary>
+                        <div class="topic-item"><input type="checkbox" id="phy_unit14_1" onclick="updateProgress()"> Electromagnetic induction: Faraday's law. Induced emf and current: Lenz’s Law, Eddy currents. Self and mutual inductance.</div>
+                        <div class="topic-item"><input type="checkbox" id="phy_unit14_2" onclick="updateProgress()"> Alternating currents, peak and RMS value of alternating current/ voltage: reactance and impedance: LCR series circuit, resonance: power in AC circuits, wattless current. AC generator and transformer.</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT 14:</h4>
+                            <textarea id="notes_phy_unit14" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
+                        </div>
+                    </details>
+                    <details>
+                        <summary class="font-semibold">UNIT 15: ELECTROMAGNETIC WAVES</summary>
+                        <div class="topic-item"><input type="checkbox" id="phy_unit15_1" onclick="updateProgress()"> Displacement current. Electromagnetic waves and their characteristics, Transverse nature of electromagnetic waves, Electromagnetic spectrum (radio waves, microwaves, infrared, visible, ultraviolet. X-rays. Gamma rays), Applications of e.m. waves.</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT 15:</h4>
+                            <textarea id="notes_phy_unit15" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
+                        </div>
+                    </details>
+                    <details>
+                        <summary class="font-semibold">UNIT 16: OPTICS</summary>
+                        <div class="topic-item"><input type="checkbox" id="phy_unit16_1" onclick="updateProgress()"> Reflection of light, spherical mirrors, mirror formula. Refraction of light at plane and spherical surfaces, thin lens formula and lens maker formula. Total internal reflection and its applications.</div>
+                        <div class="topic-item"><input type="checkbox" id="phy_unit16_2" onclick="updateProgress()"> Magnification. Power of a Lens. Combination of thin lenses in contact. Refraction of light through a prism. Microscope and Astronomical Telescope (reflecting and refracting) and their magnifying powers.</div>
+                        <div class="topic-item"><input type="checkbox" id="phy_unit16_3" onclick="updateProgress()"> Wave optics: wavefront and Huygens' principle. Laws of reflection and refraction using Huygens principle. Interference, Young's double-slit experiment and expression for fringe width, coherent sources, and sustained interference of light. Diffraction due to a single slit, width of central maximum. Polarization, plane-polarized light: Brewster's law, uses of plane-polarized light and Polaroid.</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT 16:</h4>
+                            <textarea id="notes_phy_unit16" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
+                        </div>
+                    </details>
+                    <details>
+                        <summary class="font-semibold">UNIT 17: DUAL NATURE OF MATTER AND RADIATION</summary>
+                        <div class="topic-item"><input type="checkbox" id="phy_unit17_1" onclick="updateProgress()"> Dual nature of radiation. Photoelectric effect. Hertz and Lenard's observations; Einstein's photoelectric equation: particle nature of light. Matter waves-wave nature of particle, de Broglie relation.</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT 17:</h4>
+                            <textarea id="notes_phy_unit17" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
+                        </div>
+                    </details>
+                    <details>
+                        <summary class="font-semibold">UNIT 18: ATOMS AND NUCLEI</summary>
+                        <div class="topic-item"><input type="checkbox" id="phy_unit18_1" onclick="updateProgress()"> Alpha-particle scattering experiment; Rutherford's model of atom; Bohr model, energy levels, hydrogen spectrum.</div>
+                        <div class="topic-item"><input type="checkbox" id="phy_unit18_2" onclick="updateProgress()"> Composition and size of nucleus, atomic masses, Mass-energy relation, mass defect; binding energy per nucleon and its variation with mass number, nuclear fission, and fusion.</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT 18:</h4>
+                            <textarea id="notes_phy_unit18" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
+                        </div>
+                    </details>
+                    <details>
+                        <summary class="font-semibold">UNIT 19: ELECTRONIC DEVICES</summary>
+                        <div class="topic-item"><input type="checkbox" id="phy_unit19_1" onclick="updateProgress()"> Semiconductors; semiconductor diode: I-V characteristics in forward and reverse bias; diode as a rectifier; I-V characteristics of LED. the photodiode, solar cell, and Zener diode; Zener diode as a voltage regulator.</div>
+                        <div class="topic-item"><input type="checkbox" id="phy_unit19_2" onclick="updateProgress()"> Logic gates (OR. AND. NOT. NAND and NOR).</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT 19:</h4>
+                            <textarea id="notes_phy_unit19" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
+                        </div>
+                    </details>
+                    <details>
+                        <summary class="font-semibold">UNIT 20: EXPERIMENTAL SKILLS</summary>
+                        <div class="topic-item"><input type="checkbox" id="phy_unit20_1" onclick="updateProgress()"> Familiarity with the basic approach and observations of the experiments and activities: Vernier calipers, Screw gauge, Simple Pendulum, Metre Scale, Young's modulus, Surface tension, Co-efficient of Viscosity, Speed of sound, Specific heat capacity.</div>
+                        <div class="topic-item"><input type="checkbox" id="phy_unit20_2" onclick="updateProgress()"> Resistivity of wire, Resistance using Ohm's law, Resistance and figure of merit of a galvanometer, Focal length of mirrors/lenses, Angle of deviation for prism, Refractive index of glass slab.</div>
+                        <div class="topic-item"><input type="checkbox" id="phy_unit20_3" onclick="updateProgress()"> Characteristic curves of p-n junction diode, Zener diode, Identification of Diode, LED, Resistor, Capacitor.</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT 20:</h4>
+                            <textarea id="notes_phy_unit20" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
                         </div>
                     </details>
                 </div>
@@ -102,62 +227,204 @@
 
             <!-- Chemistry -->
             <details class="schedule-tab bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
-                <summary class="text-xl font-medium text-green-800 cursor-pointer">Chemistry Chapters (Key Topics Breakdown)</summary>
+                <summary class="text-xl font-medium text-green-800 cursor-pointer">Chemistry Syllabus</summary>
                 <div class="mt-4 space-y-2">
+                    <span class="sub-section-title">PHYSICAL CHEMISTRY</span>
                     <details>
-                        <summary class="font-semibold">Sep: Solid State & Solutions (1-2 weeks)</summary>
-                        <div class="topic">
-                            <div class="chapter"><input type="checkbox" id="c1a" onclick="updateProgress()"> Types of Lattices and Solutions</div>
-                            <div class="chapter"><input type="checkbox" id="c1b" onclick="updateProgress()"> Colligative Properties</div>
+                        <summary class="font-semibold">UNIT I: SOME BASIC CONCEPTS IN CHEMISTRY</summary>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit1_1" onclick="updateProgress()"> Matter and its nature, Dalton's atomic theory: Concept of atom, molecule, element, and compound:: Laws of chemical combination; Atomic and molecular masses, mole concept, molar mass, percentage composition, empirical and molecular formulae: Chemical equations and stoichiometry.</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT I:</h4>
+                            <textarea id="notes_chem_unit1" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
                         </div>
                     </details>
                     <details>
-                        <summary class="font-semibold">Sep: Electrochemistry (3-4 weeks)</summary>
-                        <div class="topic">
-                            <div class="chapter"><input type="checkbox" id="c2a" onclick="updateProgress()"> Electrolysis and Conductance</div>
-                            <div class="chapter"><input type="checkbox" id="c2b" onclick="updateProgress()"> Electrochemical Cells</div>
+                        <summary class="font-semibold">UNIT 2: ATOMIC STRUCTURE</summary>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit2_1" onclick="updateProgress()"> Nature of electromagnetic radiation, photoelectric effect; Spectrum of the hydrogen atom. Bohr model of a hydrogen atom - its postulates, derivation of the relations for the energy of the electron and radii of the different orbits, limitations of Bohr's model; Dual nature of matter, de Broglie's relationship. Heisenberg uncertainty principle.</div>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit2_2" onclick="updateProgress()"> Elementary ideas of quantum mechanics, quantum mechanics, the quantum mechanical model of the atom, its important features. Concept of atomic orbitals as one-electron wave functions: Variation of $\Psi$ and $\Psi^2$ with r for 1s and 2s orbitals; various quantum numbers (principal, angular momentum, and magnetic quantum numbers) and their significance; shapes of s, p, and d - orbitals, electron spin and spin quantum number: Rules for filling electrons in orbitals – Aufbau principle. Pauli's exclusion principle and Hund's rule, electronic configuration of elements, extra stability of half-filled and completely filled orbitals.</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT 2:</h4>
+                            <textarea id="notes_chem_unit2" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
                         </div>
                     </details>
                     <details>
-                        <summary class="font-semibold">Oct: Chemical Kinetics (1-2 weeks)</summary>
-                        <div class="topic">
-                            <div class="chapter"><input type="checkbox" id="c3a" onclick="updateProgress()"> Rate Laws and Order</div>
-                            <div class="chapter"><input type="checkbox" id="c3b" onclick="updateProgress()"> Catalysis</div>
+                        <summary class="font-semibold">UNIT 3: CHEMICAL BONDING AND MOLECULAR STRUCTURE</summary>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit3_1" onclick="updateProgress()"> Kossel - Lewis approach to chemical bond formation, the concept of ionic and covalent bonds. Ionic Bonding: Formation of ionic bonds, factors affecting the formation of ionic bonds; calculation of lattice enthalpy.</div>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit3_2" onclick="updateProgress()"> Covalent Bonding: Concept of electronegativity. Fajan’s rule, dipole moment: Valence Shell Electron Pair Repulsion (VSEPR) theory and shapes of simple molecules.</div>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit3_3" onclick="updateProgress()"> Quantum mechanical approach to covalent bonding: Valence bond theory - its important features, the concept of hybridization involving s, p, and d orbitals; Resonance.</div>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit3_4" onclick="updateProgress()"> Molecular Orbital Theory - Its important features. LCAOs, types of molecular orbitals (bonding, antibonding), sigma and pi-bonds, molecular orbital electronic configurations of homonuclear diatomic molecules, the concept of bond order, bond length, and bond energy.</div>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit3_5" onclick="updateProgress()"> Elementary idea of metallic bonding. Hydrogen bonding and its applications.</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT 3:</h4>
+                            <textarea id="notes_chem_unit3" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
                         </div>
                     </details>
                     <details>
-                        <summary class="font-semibold">Oct: p-Block Elements I (3-4 weeks)</summary>
-                        <div class="topic">
-                            <div class="chapter"><input type="checkbox" id="c4a" onclick="updateProgress()"> Boron and Carbon Compounds</div>
-                            <div class="chapter"><input type="checkbox" id="c4b" onclick="updateProgress()"> Nitrogen and Oxygen Families</div>
+                        <summary class="font-semibold">UNIT 4: CHEMICAL THERMODYNAMICS</summary>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit4_1" onclick="updateProgress()"> Fundamentals of thermodynamics: System and surroundings, extensive and intensive properties, state functions, types of processes.</div>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit4_2" onclick="updateProgress()"> The first law of thermodynamics - Concept of work, heat internal energy and enthalpy, heat capacity, molar heat capacity; Hess’s law of constant heat summation; Enthalpies of bond dissociation, combustion, formation, atomization, sublimation, phase transition, hydration, ionization, and solution.</div>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit4_3" onclick="updateProgress()"> The second law of thermodynamics - Spontaneity of processes; $\Delta S$ of the universe and $\Delta G$ of the system as criteria for spontaneity. $\Delta G^\circ$ (Standard Gibbs energy change) and equilibrium constant.</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT 4:</h4>
+                            <textarea id="notes_chem_unit4" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
                         </div>
                     </details>
                     <details>
-                        <summary class="font-semibold">Nov: Coordination Compounds (1-2 weeks)</summary>
-                        <div class="topic">
-                            <div class="chapter"><input type="checkbox" id="c5a" onclick="updateProgress()"> Werner's Theory</div>
-                            <div class="chapter"><input type="checkbox" id="c5b" onclick="updateProgress()"> Isomerism and Stability</div>
+                        <summary class="font-semibold">UNIT 5: SOLUTIONS</summary>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit5_1" onclick="updateProgress()"> Different methods for expressing the concentration of solution - molality, molarity, mole fraction, percentage (by volume and mass both), the vapour pressure of solutions and Raoult's Law - Ideal and non-ideal solutions, vapour pressure - composition, plots for ideal and non-ideal solutions;</div>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit5_2" onclick="updateProgress()"> Colligative properties of dilute solutions - a relative lowering of vapour pressure, depression of freezing point, the elevation of boiling point and osmotic pressure; Determination of molecular mass using colligative properties; Abnormal value of molar mass, van’t Hoff factor and its significance.</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT 5:</h4>
+                            <textarea id="notes_chem_unit5" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
                         </div>
                     </details>
                     <details>
-                        <summary class="font-semibold">Nov: d-Block Elements (3-4 weeks)</summary>
-                        <div class="topic">
-                            <div class="chapter"><input type="checkbox" id="c6a" onclick="updateProgress()"> Properties and Compounds</div>
-                            <div class="chapter"><input type="checkbox" id="c6b" onclick="updateProgress()"> Lanthanoids and Actinoids</div>
+                        <summary class="font-semibold">UNIT 6: EQUILIBRIUM</summary>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit6_1" onclick="updateProgress()"> Meaning of equilibrium, the concept of dynamic equilibrium. Equilibria involving physical processes: Solid-liquid, liquid - gas and solid-gas equilibria, Henry's law. General characteristics of equilibrium involving physical processes.</div>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit6_2" onclick="updateProgress()"> Equilibrium involving chemical processes: Law of chemical equilibrium, equilibrium constants ($K_p$ and $K_c$) and their significance, the significance of $\Delta G$ and $\Delta G^\circ$ in chemical equilibrium, factors affecting equilibrium concentration, pressure, temperature, the effect of catalyst; Le Chatelier’s principle.</div>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit6_3" onclick="updateProgress()"> Ionic equilibrium: Weak and strong electrolytes, ionization of electrolytes, various concepts of acids and bases (Arrhenius. Bronsted - Lowry and Lewis) and their ionization, acid-base equilibria (including multistage ionization) and ionization constants, ionization of water. pH scale, common ion effect, hydrolysis of salts and pH of their solutions, the solubility of sparingly soluble salts and solubility products, buffer solutions.</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT 6:</h4>
+                            <textarea id="notes_chem_unit6" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
                         </div>
                     </details>
                     <details>
-                        <summary class="font-semibold">Dec: Haloalkanes & Haloarenes (1-2 weeks)</summary>
-                        <div class="topic">
-                            <div class="chapter"><input type="checkbox" id="c7a" onclick="updateProgress()"> Nomenclature and Reactions</div>
-                            <div class="chapter"><input type="checkbox" id="c7b" onclick="updateProgress()"> SN1 and SN2 Mechanisms</div>
+                        <summary class="font-semibold">UNIT 7: REDOX REACTIONS AND ELECTROCHEMISTRY</summary>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit7_1" onclick="updateProgress()"> Electronic concepts of oxidation and reduction, redox reactions, oxidation number, rules for assigning oxidation number, balancing of redox reactions.</div>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit7_2" onclick="updateProgress()"> Electrolytic and metallic conduction, conductance in electrolytic solutions, molar conductivities and their variation with concentration: Kohlrausch’s law and its applications.</div>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit7_3" onclick="updateProgress()"> Electrochemical cells - Electrolytic and Galvanic cells, different types of electrodes, electrode potentials including standard electrode potential, half - cell and cell reactions, emf of a Galvanic cell and its measurement: Nernst equation and its applications; Relationship between cell potential and Gibbs' energy change: Dry cell and lead accumulator; Fuel cells.</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT 7:</h4>
+                            <textarea id="notes_chem_unit7" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
                         </div>
                     </details>
                     <details>
-                        <summary class="font-semibold">Dec: Alcohols, Phenols & Ethers (3-4 weeks)</summary>
-                        <div class="topic">
-                            <div class="chapter"><input type="checkbox" id="c8a" onclick="updateProgress()"> Preparation and Properties</div>
-                            <div class="chapter"><input type="checkbox" id="c8b" onclick="updateProgress()"> Ether Formation and Uses</div>
+                        <summary class="font-semibold">UNIT 8: CHEMICAL KINETICS</summary>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit8_1" onclick="updateProgress()"> Rate of a chemical reaction, factors affecting the rate of reactions: concentration, temperature, pressure, and catalyst; elementary and complex reactions, order and molecularity of reactions, rate law, rate constant and its units, differential and integral forms of zero and first-order reactions, their characteristics and half-lives, the effect of temperature on the rate of reactions, Arrhenius theory, activation energy and its calculation, collision theory of bimolecular gaseous reactions (no derivation).</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT 8:</h4>
+                            <textarea id="notes_chem_unit8" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
+                        </div>
+                    </details>
+
+                    <span class="sub-section-title">INORGANIC CHEMISTRY</span>
+                    <details>
+                        <summary class="font-semibold">UNIT 9: CLASSIFICATION OF ELEMENTS AND PERIODICITY IN PROPERTIES</summary>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit9_1" onclick="updateProgress()"> Modern periodic law and present form of the periodic table, s, p. d and f block elements, periodic trends in properties of elements atomic and ionic radii, ionization enthalpy, electron gain enthalpy, valence, oxidation states, and chemical reactivity.</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT 9:</h4>
+                            <textarea id="notes_chem_unit9" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
+                        </div>
+                    </details>
+                    <details>
+                        <summary class="font-semibold">UNIT 10: P- BLOCK ELEMENTS</summary>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit10_1" onclick="updateProgress()"> General Introduction: Electronic configuration and general trends in physical and chemical properties of elements across the periods and down the groups; unique behaviour of the first element in each group.</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT 10:</h4>
+                            <textarea id="notes_chem_unit10" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
+                        </div>
+                    </details>
+                    <details>
+                        <summary class="font-semibold">UNIT 11: d - and f- BLOCK ELEMENTS</summary>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit11_1" onclick="updateProgress()"> Transition Elements: General introduction, electronic configuration, occurrence and characteristics, general trends in properties of the first-row transition elements - physical properties, ionization enthalpy, oxidation states, atomic radii, colour, catalytic behaviour, magnetic properties, complex formation, interstitial compounds, alloy formation; Preparation, properties, and uses of $K_2Cr_2O_7$, and $KMnO_4$.</div>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit11_2" onclick="updateProgress()"> Inner Transition Elements: Lanthanoids - Electronic configuration, oxidation states, and lanthanoid contraction. Actinoids - Electronic configuration and oxidation states.</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT 11:</h4>
+                            <textarea id="notes_chem_unit11" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
+                        </div>
+                    </details>
+                    <details>
+                        <summary class="font-semibold">UNIT 12: CO-ORDINATION COMPOUNDS</summary>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit12_1" onclick="updateProgress()"> Introduction to coordination compounds. Werner's theory; ligands, coordination number, denticity. chelation; IUPAC nomenclature of mononuclear co-ordination compounds, isomerism; Bonding-Valence bond approach and basic ideas of Crystal field theory, colour and magnetic properties; Importance of co-ordination compounds (in qualitative analysis, extraction of metals and in biological systems).</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT 12:</h4>
+                            <textarea id="notes_chem_unit12" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
+                        </div>
+                    </details>
+
+                    <span class="sub-section-title">ORGANIC CHEMISTRY</span>
+                    <details>
+                        <summary class="font-semibold">UNIT 13: PURIFICATION AND CHARACTERISATION OF ORGANIC COMPOUNDS</summary>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit13_1" onclick="updateProgress()"> Purification - Crystallization, sublimation, distillation, differential extraction, and chromatography - principles and their applications.</div>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit13_2" onclick="updateProgress()"> Qualitative analysis - Detection of nitrogen, sulphur, phosphorus, and halogens.</div>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit13_3" onclick="updateProgress()"> Quantitative analysis (basic principles only) - Estimation of carbon, hydrogen, nitrogen, halogens, sulphur, phosphorus. Calculations of empirical formulae and molecular formulae: Numerical problems in organic quantitative analysis.</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT 13:</h4>
+                            <textarea id="notes_chem_unit13" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
+                        </div>
+                    </details>
+                    <details>
+                        <summary class="font-semibold">UNIT 14: SOME BASIC PRINCIPLES OF ORGANIC CHEMISTRY</summary>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit14_1" onclick="updateProgress()"> Tetravalency of carbon: Shapes of simple molecules - hybridization (s and p): Classification of organic compounds based on functional groups: and those containing halogens, oxygen, nitrogen, and sulphur; Homologous series: Isomerism - structural and stereoisomerism.</div>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit14_2" onclick="updateProgress()"> Nomenclature (Trivial and IUPAC)</div>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit14_3" onclick="updateProgress()"> Covalent bond fission - Homolytic and heterolytic: free radicals, carbocations, and carbanions; stability of carbocations and free radicals, electrophiles, and nucleophiles.</div>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit14_4" onclick="updateProgress()"> Electronic displacement in a covalent bond - Inductive effect, electromeric effect, resonance, and hyperconjugation.</div>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit14_5" onclick="updateProgress()"> Common types of organic reactions- Substitution, addition, elimination, and rearrangement.</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT 14:</h4>
+                            <textarea id="notes_chem_unit14" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
+                        </div>
+                    </details>
+                    <details>
+                        <summary class="font-semibold">UNIT 15: HYDROCARBONS</summary>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit15_1" onclick="updateProgress()"> Classification, isomerism, IUPAC nomenclature, general methods of preparation, properties, and reactions.</div>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit15_2" onclick="updateProgress()"> Alkanes - Conformations: Sawhorse and Newman projections (of ethane): Mechanism of halogenation of alkanes.</div>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit15_3" onclick="updateProgress()"> Alkenes - Geometrical isomerism: Mechanism of electrophilic addition: addition of hydrogen, halogens, water, hydrogen halides (Markownikoffs and peroxide effect): Ozonolysis and polymerization.</div>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit15_4" onclick="updateProgress()"> Alkynes - Acidic character: Addition of hydrogen, halogens, water, and hydrogen halides: Polymerization.</div>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit15_5" onclick="updateProgress()"> Aromatic hydrocarbons - Nomenclature, benzene - structure and aromaticity: Mechanism of electrophilic substitution: halogenation, nitration. Friedel - Craft's alkylation and acylation, directive influence of the functional group in mono-substituted benzene.</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT 15:</h4>
+                            <textarea id="notes_chem_unit15" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
+                        </div>
+                    </details>
+                    <details>
+                        <summary class="font-semibold">UNIT 16: ORGANIC COMPOUNDS CONTAINING HALOGENS</summary>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit16_1" onclick="updateProgress()"> General methods of preparation, properties, and reactions; Nature of C-X bond; Mechanisms of substitution reactions.</div>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit16_2" onclick="updateProgress()"> Uses; Environmental effects of chloroform, iodoform freons, and DDT.</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT 16:</h4>
+                            <textarea id="notes_chem_unit16" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
+                        </div>
+                    </details>
+                    <details>
+                        <summary class="font-semibold">UNIT 17: ORGANIC COMPOUNDS CONTAINING OXYGEN</summary>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit17_1" onclick="updateProgress()"> ALCOHOLS, PHENOLS, AND ETHERS: Alcohols: Identification of primary, secondary, and tertiary alcohols: mechanism of dehydration. Phenols: Acidic nature, electrophilic substitution reactions: halogenation. nitration and sulphonation. Reimer - Tiemann reaction. Ethers: Structure.</div>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit17_2" onclick="updateProgress()"> Aldehyde and Ketones: Nature of carbonyl group; Nucleophilic addition to >C=O group, relative reactivities of aldehydes and ketones; Important reactions such as - Nucleophilic addition reactions (addition of HCN. NH3, and its derivatives), Grignard reagent; oxidation: reduction (Wolf Kishner and Clemmensen); the acidity of $\alpha$-hydrogen. aldol condensation, Cannizzaro reaction. Haloform reaction, Chemical tests to distinguish between aldehydes and Ketones.</div>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit17_3" onclick="updateProgress()"> Carboxylic Acids: Acidic strength and factors affecting it.</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT 17:</h4>
+                            <textarea id="notes_chem_unit17" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
+                        </div>
+                    </details>
+                    <details>
+                        <summary class="font-semibold">UNIT 18: ORGANIC COMPOUNDS CONTAINING NITROGEN</summary>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit18_1" onclick="updateProgress()"> General methods of preparation. Properties, reactions, and uses. Amines: Nomenclature, classification structure, basic character, and identification of primary, secondary, and tertiary amines and their basic character.</div>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit18_2" onclick="updateProgress()"> Diazonium Salts: Importance in synthetic organic chemistry.</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT 18:</h4>
+                            <textarea id="notes_chem_unit18" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
+                        </div>
+                    </details>
+                    <details>
+                        <summary class="font-semibold">UNIT 19: BIOMOLECULES</summary>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit19_1" onclick="updateProgress()"> General introduction and importance of biomolecules. CARBOHYDRATES - Classification; aldoses and ketoses: monosaccharides (glucose and fructose) and constituent monosaccharides of oligosaccharides (sucrose, lactose, and maltose).</div>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit19_2" onclick="updateProgress()"> PROTEINS - Elementary Idea of $\alpha$-amino acids, peptide bond, polypeptides. Proteins: primary, secondary, tertiary, and quaternary structure (qualitative idea only), denaturation of proteins, enzymes.</div>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit19_3" onclick="updateProgress()"> VITAMINS – Classification and functions. NUCLEIC ACIDS – Chemical constitution of DNA and RNA. Biological functions of nucleic acids. Hormones (General introduction).</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT 19:</h4>
+                            <textarea id="notes_chem_unit19" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
+                        </div>
+                    </details>
+                    <details>
+                        <summary class="font-semibold">UNIT 20: PRINCIPLES RELATED TO PRACTICAL CHEMISTRY</summary>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit20_1" onclick="updateProgress()"> Detection of extra elements (Nitrogen, Sulphur, halogens) in organic compounds; Detection of the following functional groups; hydroxyl (alcoholic and phenolic), carbonyl (aldehyde and ketones) carboxyl, and amino groups in organic compounds.</div>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit20_2" onclick="updateProgress()"> The chemistry involved in the preparation of the following: Inorganic compounds; Mohr’s salt, potash alum. Organic compounds: Acetanilide, p-nitro acetanilide, aniline yellow, iodoform.</div>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit20_3" onclick="updateProgress()"> The chemistry involved in the titrimetric exercises – Acids, bases and the use of indicators, oxalic- acid vs $KMnO_4$, Mohr’s salt vs $KMnO_4$.</div>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit20_4" onclick="updateProgress()"> Chemical principles involved in the qualitative salt analysis: Cations – $Pb^{2+}$, $Cu^{2+}$, $Al^{3+}$, $Fe^{3+}$, $Zn^{2+}$, $Ni^{2+}$, $Ca^{2+}$, $Ba^{2+}$, $Mg^{2+}$, $NH_4^+$. Anions- $CO_3^{2-}$, $S^{2-}$, $SO_4^{2-}$, $NO_3^-$, $NO_2^-$, $Cl^-$, $Br^-$, $I^-$.</div>
+                        <div class="topic-item"><input type="checkbox" id="chem_unit20_5" onclick="updateProgress()"> Chemical principles involved in the following experiments: Enthalpy of solution of $CuSO_4$, Enthalpy of neutralization of strong acid and strong base, Preparation of lyophilic and lyophobic sols, Kinetic study of the reaction of iodide ions with hydrogen peroxide at room temperature.</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT 20:</h4>
+                            <textarea id="notes_chem_unit20" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
                         </div>
                     </details>
                 </div>
@@ -165,122 +432,107 @@
 
             <!-- Biology -->
             <details class="schedule-tab bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-500">
-                <summary class="text-xl font-medium text-yellow-800 cursor-pointer">Biology Chapters (Key Topics Breakdown)</summary>
+                <summary class="text-xl font-medium text-yellow-800 cursor-pointer">Biology Syllabus</summary>
                 <div class="mt-4 space-y-2">
                     <details>
-                        <summary class="font-semibold">Sep: Reproduction in Organisms (1-2 weeks)</summary>
-                        <div class="topic">
-                            <div class="chapter"><input type="checkbox" id="b1a" onclick="updateProgress()"> Asexual and Sexual Reproduction</div>
-                            <div class="chapter"><input type="checkbox" id="b1b" onclick="updateProgress()"> Lifecycle Patterns</div>
+                        <summary class="font-semibold">UNIT 1: Diversity in Living World</summary>
+                        <div class="topic-item"><input type="checkbox" id="bio_unit1_1" onclick="updateProgress()"> What is living?; Biodiversity; Need for classification;; Taxonomy & Systematics; Concept of species and taxonomical hierarchy; Binomial nomenclature;</div>
+                        <div class="topic-item"><input type="checkbox" id="bio_unit1_2" onclick="updateProgress()"> Five kingdom classification; salient features and classification of Monera; Protista and Fungi into major groups; Lichens; Viruses and Viroids.</div>
+                        <div class="topic-item"><input type="checkbox" id="bio_unit1_3" onclick="updateProgress()"> Salient features and classification of plants into major groups-Algae, Bryophytes, Pteridophytes, Gymnosperms (three to five salient and distinguishing features and at least two examples of each category);</div>
+                        <div class="topic-item"><input type="checkbox" id="bio_unit1_4" onclick="updateProgress()"> Salient features and classification of animals-nonchordate up to phyla level and chordate up to classes level (three to five salient features and at least two examples).</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT 1:</h4>
+                            <textarea id="notes_bio_unit1" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
                         </div>
                     </details>
                     <details>
-                        <summary class="font-semibold">Sep: Human Reproduction (3-4 weeks)</summary>
-                        <div class="topic">
-                            <div class="chapter"><input type="checkbox" id="b2a" onclick="updateProgress()"> Male and Female Reproductive Systems</div>
-                            <div class="chapter"><input type="checkbox" id="b2b" onclick="updateProgress()"> Pregnancy and Embryonic Development</div>
+                        <summary class="font-semibold">UNIT 2: Structural Organisation in Animals and Plants</summary>
+                        <div class="topic-item"><input type="checkbox" id="bio_unit2_1" onclick="updateProgress()"> Morphology and modifications; Tissues; Anatomy and functions of different parts of flowering plants: Root, stem, leaf, inflorescence- cymose and recemose, flower, fruit and seed (To be dealt along with the relevant practical of the Practical Syllabus) Family (malvaceae, Cruciferae, leguminoceae, compositae, graminae).</div>
+                        <div class="topic-item"><input type="checkbox" id="bio_unit2_2" onclick="updateProgress()"> Animal tissues; Morphology, anatomy and functions of different systems (digestive, circulatory, respiratory, nervous and reproductive) of an insect (Frog). (Brief account only).</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT 2:</h4>
+                            <textarea id="notes_bio_unit2" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
                         </div>
                     </details>
                     <details>
-                        <summary class="font-semibold">Oct: Genetics & Evolution (1-2 weeks)</summary>
-                        <div class="topic">
-                            <div class="chapter"><input type="checkbox" id="b3a" onclick="updateProgress()"> Mendelian Genetics</div>
-                            <div class="chapter"><input type="checkbox" id="b3b" onclick="updateProgress()"> Evolution and Speciation</div>
+                        <summary class="font-semibold">UNIT 3: Cell Structure and Function</summary>
+                        <div class="topic-item"><input type="checkbox" id="bio_unit3_1" onclick="updateProgress()"> Cell theory and cell as the basic unit of life; Structure of prokaryotic and eukaryotic cell; Plant cell and animal cell; Cell envelope, cell membrane, cell wall; Cell organelles- structure and function; Endomembrane system-endoplasmic reticulum, Golgi bodies, lysosomes, vacuoles; mitochondria, ribosomes, plastids, micro bodies; Cytoskeleton, cilia, flagella, centrioles (ultra structure and function); Nucleus-nuclear membrane, chromatin, nucleolus.</div>
+                        <div class="topic-item"><input type="checkbox" id="bio_unit3_2" onclick="updateProgress()"> Chemical constituents of living cells: Biomolecules-structure and function of proteins, carbodydrates, lipids, nucleic acids; Enzymes-types, properties, enzyme action, classification and nomenclature of anzymes.</div>
+                        <div class="topic-item"><input type="checkbox" id="bio_unit3_3" onclick="updateProgress()"> Cell division: Cell cycle, mitosis, meiosis and their significance.</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT 3:</h4>
+                            <textarea id="notes_bio_unit3" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
                         </div>
                     </details>
                     <details>
-                        <summary class="font-semibold">Oct: Biotechnology (3-4 weeks)</summary>
-                        <div class="topic">
-                            <div class="chapter"><input type="checkbox" id="b4a" onclick="updateProgress()"> Principles and Processes</div>
-                            <div class="chapter"><input type="checkbox" id="b4b" onclick="updateProgress()"> Genetic Engineering</div>
+                        <summary class="font-semibold">UNIT 4: Plant Physiology</summary>
+                        <div class="topic-item"><input type="checkbox" id="bio_unit4_1" onclick="updateProgress()"> Photosynthesis: Photosynthesis as a means of Autotrophic nutrition; Site of photosynthesis take place; pigments involved in Photosynthesis (Elementary idea); Photochemical and biosynthetic phases of photosynthesis; Cyclic and non cyclic and photophosphorylation; Chemiosmotic hypothesis; Photorespiration C3 and C4 pathways; Factors affecting photosynthesis.</div>
+                        <div class="topic-item"><input type="checkbox" id="bio_unit4_2" onclick="updateProgress()"> Respiration: Exchange gases; Cellular respiration-glycolysis, fermentation (anaerobic), TCA cycle and electron transport system (aerobic); Energy relations- Number of ATP molecules generated; Amphibolic pathways; Respiratory quotient.</div>
+                        <div class="topic-item"><input type="checkbox" id="bio_unit4_3" onclick="updateProgress()"> Plant growth and development: Seed germination; Phases of Plant growth and plant growth rate; Conditions of growth; Differentiation, dedifferentiation and redifferentiation; Sequence of developmental process in a plant cell; Growth regulators- auxin, gibberellin, cytokinin, ethylene, ABA.</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT 4:</h4>
+                            <textarea id="notes_bio_unit4" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
                         </div>
                     </details>
                     <details>
-                        <summary class="font-semibold">Nov: Ecology & Environment (1-2 weeks)</summary>
-                        <div class="topic">
-                            <div class="chapter"><input type="checkbox" id="b5a" onclick="updateProgress()"> Ecosystem Dynamics</div>
-                            <div class="chapter"><input type="checkbox" id="b5b" onclick="updateProgress()"> Biodiversity and Conservation</div>
+                        <summary class="font-semibold">UNIT 5: Human Physiology</summary>
+                        <div class="topic-item"><input type="checkbox" id="bio_unit5_1" onclick="updateProgress()"> Breathing and Respiration: Respiratory organs in animals (recall only); Respiratory system in humans; Mechanism of breathing and its regulation in humans-Exchange of gases, transport of gases and regulation of respiration Respiratory volumes; Disorders related to respiration-Asthma, Emphysema, Occupational respiratory disorders.</div>
+                        <div class="topic-item"><input type="checkbox" id="bio_unit5_2" onclick="updateProgress()"> Body fluids and circulation: Composition of blood, blood groups, coagulation of blood; Composition of lymph and its function; Human circulatory system-Structure of human heart and blood vessels; Cardiac cycle, cardiac output, ECG, Double circulation; Regulation of cardiac activity; Disorders of circulatory system-Hypertension, Coronary artery disease, Angina pectoris, Heart failure.</div>
+                        <div class="topic-item"><input type="checkbox" id="bio_unit5_3" onclick="updateProgress()"> Excretory products and their elimination: Modes of excretion- Ammonotelism, ureotelism, uricotelism; Human excretory system-structure and fuction; Urine formation, Osmoregulation; Regulation of kidney function-Renin-angiotensin, Atrial Natriuretic Factor, ADH and Diabetes insipidus; Role of other organs in excretion; Disorders; Uraemia, Renal failure, Renal calculi, Nephritis; Dialysis and artificial kidney.</div>
+                        <div class="topic-item"><input type="checkbox" id="bio_unit5_4" onclick="updateProgress()"> Locomotion and Movement: Types of movement- ciliary, fiagellar, muscular; Skeletal muscle- contractile proteins and muscle contraction; Skeletal system and its functions (To be dealt with the relevant practical of Practical syllabus); Joints; Disorders of muscular and skeletal system-Myasthenia gravis, Tetany, Muscular dystrophy, Arthritis, Osteoporosis, Gout.</div>
+                        <div class="topic-item"><input type="checkbox" id="bio_unit5_5" onclick="updateProgress()"> Neural control and coordination: Neuron and nerves; Nervous system in humans-central nervous system, peripheral nervous system and visceral nervous system; Generation and conduction of nerve impulse.</div>
+                        <div class="topic-item"><input type="checkbox" id="bio_unit5_6" onclick="updateProgress()"> Chemical coordination and regulation: Endocrine glands and hormones; Human endocrine system-Hypothalamus, Pituitary, Pineal, Thyroid, Parathyroid, Adrenal, Pancreas, Gonads; Mechanism of hormone action (Elementary Idea); Role of hormones as messengers and regulators, Hypo-and hyperactivity and related disorders (Common disorders e.g. Dwarfism, Acromegaly, Cretinism, goiter, exopthalmic goiter, diabetes, Addison’s disease).</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT 5:</h4>
+                            <textarea id="notes_bio_unit5" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
                         </div>
                     </details>
                     <details>
-                        <summary class="font-semibold">Nov: Biotechnology & Its Applications (3-4 weeks)</summary>
-                        <div class="topic">
-                            <div class="chapter"><input type="checkbox" id="b6a" onclick="updateProgress()"> Transgenic Organisms</div>
-                            <div class="chapter"><input type="checkbox" id="b6b" onclick="updateProgress()"> Gene Therapy</div>
+                        <summary class="font-semibold">UNIT 6: Reproduction</summary>
+                        <div class="topic-item"><input type="checkbox" id="bio_unit6_1" onclick="updateProgress()"> Sexual reproduction in flowering plants: Flower structure; Development of male and female gametophytes; Pollination-types, agencies and examples; Outbreeding devices; Pollen-Pistil interaction; Double fertilization; Post fertilization events- Development of endosperm and embryo, Development of seed and formation of fruit; Special modes- apomixis, parthenocarpy, polyembryony; Significance of seed and fruit formation.</div>
+                        <div class="topic-item"><input type="checkbox" id="bio_unit6_2" onclick="updateProgress()"> Human Reproduction: Male and female reproductive systems; Microscopic anatomy of testis and ovary; Gametogenesis-spermatogenesis & oogenesis; Menstrual cycle; Fertilisation, embryo development upto blastocyst formation, implantation; Pregnancy and placenta formation (Elementary idea); Parturition (Elementary idea); Lactation (Elementary idea).</div>
+                        <div class="topic-item"><input type="checkbox" id="bio_unit6_3" onclick="updateProgress()"> Reproductive health: Need for reproductive health and prevention of sexually transmitted diseases (STD); Birth control-Need and Methods, Contraception and Medical Termination of Pregnancy (MTP); Amniocentesis; Infertility and assisted reproductive technologies – IVF, ZIFT, GIFT (Elementary idea for general awareness).</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT 6:</h4>
+                            <textarea id="notes_bio_unit6" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
                         </div>
                     </details>
                     <details>
-                        <summary class="font-semibold">Dec: Molecular Basis of Inheritance (1-2 weeks)</summary>
-                        <div class="topic">
-                            <div class="chapter"><input type="checkbox" id="b7a" onclick="updateProgress()"> DNA Replication and Transcription</div>
-                            <div class="chapter"><input type="checkbox" id="b7b" onclick="updateProgress()"> Genetic Code and Regulation</div>
+                        <summary class="font-semibold">UNIT 7: Genetics and Evolution</summary>
+                        <div class="topic-item"><input type="checkbox" id="bio_unit7_1" onclick="updateProgress()"> Heredity and variation: Mendelian Inheritance; Deviations from Mendelism- Incomplete dominance, Co-dominance, Multiple alleles and Inheritance of blood groups, Pleiotropy; Elementary idea of polygenic inheritance; Chromosome theory of inheritance; Chromosomes and genes; Sex determination-In humans, birds, honey bee; Linkage and crossing over; Sex linked inheritance-Haemophilia, Colour blindness; Mendelian disorders in humans-Thalassemia; Chromosomal disorders in humans; Down’s syndrome, Turner’s and Klinefelter’s syndromes.</div>
+                        <div class="topic-item"><input type="checkbox" id="bio_unit7_2" onclick="updateProgress()"> Molecular basis of Inheritance: Search for genetic material and DNA as genetic material; Structure of DNA and RNA; DNA packaging; DNA replication; Central dogma; Transcription, genetic code, translation; Gene expression and regulation- Lac Operon; Genome and human genome project; DNA finger printing, protein biosynthesis.</div>
+                        <div class="topic-item"><input type="checkbox" id="bio_unit7_3" onclick="updateProgress()"> Evolution: Origin of life; Biological evolution and evidences for biological evolution from Paleontology, comparative anatomy, embryology and molecular evidence); Darwin’s contribution, Modern Synthetic theory of Evolution; Mechanism of evolution- Variation (Mutation and Recombination) and Natural Selection with examples, types of natural selection; Gene flow and genetic drift; Hardy- Weinberg’s principle; Adaptive Radiation; Human evolution.</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT 7:</h4>
+                            <textarea id="notes_bio_unit7" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
                         </div>
                     </details>
                     <details>
-                        <summary class="font-semibold">Dec: Biodiversity & Conservation (3-4 weeks)</summary>
-                        <div class="topic">
-                            <div class="chapter"><input type="checkbox" id="b8a" onclick="updateProgress()"> Patterns and Hotspots</div>
-                            <div class="chapter"><input type="checkbox" id="b8b" onclick="updateProgress()"> Endangered Species</div>
-                        </div>
-                    </details>
-                </div>
-            </details>
-
-            <!-- Maths -->
-            <details class="schedule-tab bg-red-50 p-4 rounded-lg border-l-4 border-red-500">
-                <summary class="text-xl font-medium text-red-800 cursor-pointer">Maths Chapters (Key Topics Breakdown)</summary>
-                <div class="mt-4 space-y-2">
-                    <details>
-                        <summary class="font-semibold">Sep: Relations & Functions (1-2 weeks)</summary>
-                        <div class="topic">
-                            <div class="chapter"><input type="checkbox" id="m1a" onclick="updateProgress()"> Types of Relations</div>
-                            <div class="chapter"><input type="checkbox" id="m1b" onclick="updateProgress()"> Inverse Trigonometric Functions</div>
+                        <summary class="font-semibold">UNIT 8: Biology and Human Welfare</summary>
+                        <div class="topic-item"><input type="checkbox" id="bio_unit8_1" onclick="updateProgress()"> Health and Disease; Pathogens; parasites causing human diseases (Malaria, Filariasis, Ascariasis. Typhoid, Pneumonia, common cold, amoebiasis, ring worm, dengue, chikungunya); Basic concepts of immunology-vaccines; Cancer, HIV and AIDS; Adolescence, drug and alcohol abuse.Tobacco abuse.</div>
+                        <div class="topic-item"><input type="checkbox" id="bio_unit8_2" onclick="updateProgress()"> Microbes in human welfare: In household food processing, industrial production, sewage treatment, energy generation and as biocontrol agents and biofertilizers.</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT 8:</h4>
+                            <textarea id="notes_bio_unit8" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
                         </div>
                     </details>
                     <details>
-                        <summary class="font-semibold">Sep: Algebra (3-4 weeks)</summary>
-                        <div class="topic">
-                            <div class="chapter"><input type="checkbox" id="m2a" onclick="updateProgress()"> Complex Numbers</div>
-                            <div class="chapter"><input type="checkbox" id="m2b" onclick="updateProgress()"> Quadratic Equations</div>
+                        <summary class="font-semibold">UNIT 9: Biotechnology and Its Applications</summary>
+                        <div class="topic-item"><input type="checkbox" id="bio_unit9_1" onclick="updateProgress()"> Principles and process of Biotechnology: Genetic engineering (Recombinant DNA technology).</div>
+                        <div class="topic-item"><input type="checkbox" id="bio_unit9_2" onclick="updateProgress()"> Application of Biotechnology in health and agriculture: Human insulin and vaccine production, gene therapy; Genetically modified organisms-Bt crops; Transgenic Animals; Biosafety issues-Biopiracy and patents.</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT 9:</h4>
+                            <textarea id="notes_bio_unit9" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
                         </div>
                     </details>
                     <details>
-                        <summary class="font-semibold">Oct: Calculus (1-2 weeks)</summary>
-                        <div class="topic">
-                            <div class="chapter"><input type="checkbox" id="m3a" onclick="updateProgress()"> Limits and Differentiation</div>
-                            <div class="chapter"><input type="checkbox" id="m3b" onclick="updateProgress()"> Applications</div>
-                        </div>
-                    </details>
-                    <details>
-                        <summary class="font-semibold">Oct: Vectors & 3D Geometry (3-4 weeks)</summary>
-                        <div class="topic">
-                            <div class="chapter"><input type="checkbox" id="m4a" onclick="updateProgress()"> Vector Operations</div>
-                            <div class="chapter"><input type="checkbox" id="m4b" onclick="updateProgress()"> Lines and Planes</div>
-                        </div>
-                    </details>
-                    <details>
-                        <summary class="font-semibold">Nov: Linear Programming (1-2 weeks)</summary>
-                        <div class="topic">
-                            <div class="chapter"><input type="checkbox" id="m5a" onclick="updateProgress()"> Optimization Problems</div>
-                        </div>
-                    </details>
-                    <details>
-                        <summary class="font-semibold">Nov: Probability (3-4 weeks)</summary>
-                        <div class="topic">
-                            <div class="chapter"><input type="checkbox" id="m6a" onclick="updateProgress()"> Random Variables</div>
-                            <div class="chapter"><input type="checkbox" id="m6b" onclick="updateProgress()"> Binomial and Normal Distributions</div>
-                        </div>
-                    </details>
-                    <details>
-                        <summary class="font-semibold">Dec: Continuity & Differentiability (1-2 weeks)</summary>
-                        <div class="topic">
-                            <div class="chapter"><input type="checkbox" id="m7a" onclick="updateProgress()"> Continuity and Derivatives</div>
-                        </div>
-                    </details>
-                    <details>
-                        <summary class="font-semibold">Dec: Application of Derivatives (3-4 weeks)</summary>
-                        <div class="topic">
-                            <div class="chapter"><input type="checkbox" id="m8a" onclick="updateProgress()"> Tangents and Maxima-Minima</div>
+                        <summary class="font-semibold">UNIT 10: Ecology and Environment</summary>
+                        <div class="topic-item"><input type="checkbox" id="bio_unit10_1" onclick="updateProgress()"> Organisms and environmentPopulation interactions-mutualism, competition, predation, parasitism; Population attributes-growth, birth rate and death rate, age distribution.</div>
+                        <div class="topic-item"><input type="checkbox" id="bio_unit10_2" onclick="updateProgress()"> Ecosystem: Patterns, components; productivity and decomposition; Energy flow; Pyramids of number, biomass, energy.</div>
+                        <div class="topic-item"><input type="checkbox" id="bio_unit10_3" onclick="updateProgress()"> Biodiversity and its conservation: Concept of Biodiversity; Patterns of Biodiversity; Importance of Biodiversity; Loss of Biodiversity; Biodiversity conservation; Hotspots, endangered organisms, extinction, Red Data Book, biosphere reserves, National parks and sanctuaries, Sacred Groves.</div>
+                        <div class="mt-4">
+                            <h4 class="font-medium text-gray-700 mb-2">Notes for UNIT 10:</h4>
+                            <textarea id="notes_bio_unit10" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500" rows="3" placeholder="Add your notes here..." oninput="saveNote(this.id)"></textarea>
                         </div>
                     </details>
                 </div>
@@ -290,14 +542,15 @@
         <!-- Tips & Motivation -->
         <section class="mt-8 p-4 bg-indigo-50 rounded-lg">
             <h2 class="text-xl font-semibold text-indigo-800 mb-4">Daily Motivation & Tips</h2>
-            <p class="text-gray-700 mb-2">Study 1-2 topics per day per subject, with 30-minute breaks and weekends for mock tests. Remember, consistency beats cramming!</p>
-            <p class="text-purple-600 italic">"You're braver than you believe, and smarter than you think. Keep shining bright!"</p>
+            <p class="text-gray-700 mb-2">Break down each unit into smaller study sessions. Focus on understanding concepts, practicing problems, and regular revision. Consistency is key!</p>
+            <p class="text-purple-600 italic">"Believe you can and you're halfway there." - Theodore Roosevelt</p>
         </section>
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            loadProgress(); // Load saved progress
+            loadProgress();
+            loadNotes();
         });
 
         function updateProgress() {
@@ -314,7 +567,7 @@
                     localStorage.removeItem(cb.id);
                 }
             });
-            const percentage = Math.round((checked / total) * 100);
+            const percentage = total > 0 ? Math.round((checked / total) * 100) : 0;
             document.getElementById('progress-bar').style.width = percentage + '%';
             document.getElementById('progress-text').textContent = percentage + '% completed';
         }
@@ -327,10 +580,22 @@
                     cb.parentElement.classList.add('checked');
                 }
             });
-            updateProgress(); // Update immediately
+            updateProgress(); // Call to set initial progress bar state
+        }
+
+        function saveNote(id) {
+            const textarea = document.getElementById(id);
+            localStorage.setItem(id, textarea.value);
+        }
+
+        function loadNotes() {
+            document.querySelectorAll('textarea[id^="notes_"]').forEach(textarea => {
+                const savedNote = localStorage.getItem(textarea.id);
+                if (savedNote) {
+                    textarea.value = savedNote;
+                }
+            });
         }
     </script>
 </body>
 </html>
-</content>
-</create_file>
