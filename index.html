@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,24 +17,23 @@
 </head>
 <body class="min-h-screen p-4">
     <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-2xl p-6">
-        <!-- Header with Motivational Quote -->
         <header class="text-center mb-8">
             <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">NEET UG 2025 Syllabus & Study Tracker</h1>
             <p class="text-lg text-purple-600 italic quote">"The only way to do great work is to love what you do." - Steve Jobs</p>
         </header>
 
-        <!-- Progress Tracker -->
         <section class="mb-8">
             <h2 class="text-2xl font-semibold text-gray-700 mb-4">Overall Progress</h2>
             <div class="w-full bg-gray-200 rounded-full h-4 mb-2">
                 <div id="progress-bar" class="bg-green-500 h-4 rounded-full" style="width: 0%;"></div>
             </div>
             <p id="progress-text" class="text-sm text-gray-600">0% completed</p>
+            <button onclick="saveAllProgress()" class="mt-4 px-6 py-2 bg-purple-500 text-white font-bold rounded-lg shadow hover:bg-purple-600 transition-colors">
+              Save My Progress 💾
+            </button>
         </section>
 
-        <!-- Syllabus Sections -->
         <div class="space-y-6">
-            <!-- Physics -->
             <details class="schedule-tab bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
                 <summary class="text-xl font-medium text-blue-800 cursor-pointer">Physics Syllabus</summary>
                 <div class="mt-4 space-y-2">
@@ -225,7 +224,6 @@
                 </div>
             </details>
 
-            <!-- Chemistry -->
             <details class="schedule-tab bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
                 <summary class="text-xl font-medium text-green-800 cursor-pointer">Chemistry Syllabus</summary>
                 <div class="mt-4 space-y-2">
@@ -430,7 +428,6 @@
                 </div>
             </details>
 
-            <!-- Biology -->
             <details class="schedule-tab bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-500">
                 <summary class="text-xl font-medium text-yellow-800 cursor-pointer">Biology Syllabus</summary>
                 <div class="mt-4 space-y-2">
@@ -539,7 +536,6 @@
             </details>
         </div>
 
-        <!-- Tips & Motivation -->
         <section class="mt-8 p-4 bg-indigo-50 rounded-lg">
             <h2 class="text-xl font-semibold text-indigo-800 mb-4">Daily Motivation & Tips</h2>
             <p class="text-gray-700 mb-2">Break down each unit into smaller study sessions. Focus on understanding concepts, practicing problems, and regular revision. Consistency is key!</p>
@@ -561,9 +557,11 @@
                 if (cb.checked) {
                     checked++;
                     cb.parentElement.classList.add('checked');
-                    localStorage.setItem(cb.id, 'true'); // Save to localStorage
+                    // Real-time saving is already happening here
+                    localStorage.setItem(cb.id, 'true');
                 } else {
                     cb.parentElement.classList.remove('checked');
+                    // Real-time saving is already happening here
                     localStorage.removeItem(cb.id);
                 }
             });
@@ -585,7 +583,12 @@
 
         function saveNote(id) {
             const textarea = document.getElementById(id);
-            localStorage.setItem(id, textarea.value);
+            // Real-time saving of notes is already happening here
+            if (textarea.value.trim() !== '') {
+                localStorage.setItem(id, textarea.value);
+            } else {
+                localStorage.removeItem(id);
+            }
         }
 
         function loadNotes() {
@@ -595,6 +598,22 @@
                     textarea.value = savedNote;
                 }
             });
+        }
+        
+        // New function to handle the explicit save button
+        function saveAllProgress() {
+            // This function is for user confirmation, as saving is already happening on every change.
+            // We can re-run the save logic to be safe, but it's redundant with the current setup.
+            // Let's just provide feedback to the user.
+            
+            // To be thorough, re-run the save logic.
+            updateProgress();
+            document.querySelectorAll('textarea[id^="notes_"]').forEach(textarea => {
+                saveNote(textarea.id);
+            });
+
+            // Provide user feedback.
+            alert("Progress saved successfully! You can close the tab now.");
         }
     </script>
 </body>
